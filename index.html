@@ -32,6 +32,25 @@
     </dl>
   </section>
 
+  <section class="location" aria-labelledby="location-title">
+    <div class="location__head">
+      <h2 id="location-title" class="section-title">오시는 길</h2>
+      <a class="location__more" href="https://map.kakao.com/link/map/%EC%86%8D%EC%B4%88%EC%9E%90%EC%9D%B4,38.1869267,128.5799376" target="_blank" rel="noopener">지도 크게 보기 ↗</a>
+    </div>
+    <div class="map">
+      <a href="https://map.kakao.com/link/map/%EC%86%8D%EC%B4%88%EC%9E%90%EC%9D%B4,38.1869267,128.5799376" target="_blank" rel="noopener" aria-label="카카오맵에서 속초자이 위치 보기">
+        <img src="images/map.webp" width="335" height="200" alt="속초자이 주변 지도" />
+        <span class="map__marker" aria-hidden="true"><span class="map__label">속초자이</span><svg width="32" height="40" viewBox="0 0 32 40" fill="none"><path d="M16 39C13 35 1 24 1 16a15 15 0 0 1 30 0c0 8-12 19-15 23Z" fill="#536DFE" stroke="#fff" stroke-width="2"/><circle cx="16" cy="15" r="5" fill="#fff"/></svg></span>
+      </a>
+      <a class="map__credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>
+    </div>
+    <div>
+      <p class="location__name">속초자이 107동 1601호</p>
+      <p class="location__road">강원특별자치도 속초시 조양로 181</p>
+    </div>
+    <a class="button button--link" href="https://map.kakao.com/link/to/%EC%86%8D%EC%B4%88%EC%9E%90%EC%9D%B4,38.1869267,128.5799376" target="_blank" rel="noopener">카카오맵 길찾기</a>
+  </section>
+
   <section class="menu" aria-labelledby="menu-title">
     <h2 id="menu-title" class="section-title">준비된 음식</h2>
     <p class="section-desc">빈손으로 편하게 오셔서 맛있게 드시고 가세요.</p>
@@ -103,9 +122,7 @@
     </form>
 
     <div id="rsvp-done" class="card card--done" hidden tabindex="-1">
-      <div class="done__icon" aria-hidden="true">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#536dfe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-      </div>
+      <img class="done__icon" src="images/success.webp" width="56" height="56" alt="" />
       <h2 class="card__title">참석 여부를 보냈어요</h2>
       <p class="section-desc" id="done-desc"></p>
       <dl class="summary" id="summary"></dl>

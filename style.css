@@ -60,6 +60,20 @@ body {
 .menu__desc { margin-top: 4px; font-size: 13px; color: var(--text-sub); }
 .tag { padding: 1px 6px; border-radius: 6px; background: var(--primary-soft); color: var(--primary-strong); font-size: 11px; font-weight: 700; }
 
+/* Location */
+.location { display: flex; flex-direction: column; gap: 16px; padding: 0 20px 40px; }
+.location__head { display: flex; align-items: center; justify-content: space-between; }
+.location__more { font-size: 12px; color: var(--primary-strong); text-decoration: none; }
+.map { position: relative; overflow: hidden; border: 1px solid var(--border); border-radius: 16px; }
+.map > a:first-child { display: block; }
+.map img { display: block; width: 100%; height: auto; aspect-ratio: 335 / 200; object-fit: cover; }
+.map__marker { position: absolute; left: 50%; bottom: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 1px; }
+.map__label { padding: 6px 12px; border-radius: 10px; background: #fff; color: #222b3b; font-size: 13px; font-weight: 700; white-space: nowrap; }
+.map__credit { position: absolute; left: 0; right: 0; bottom: 0; padding: 2px 6px 2px 0; text-align: right; background: rgba(255,255,255,.85); color: #4b5563; font-size: 9px; text-decoration: none; }
+.location__name { font-size: 15px; font-weight: 700; color: #111827; }
+.location__road { margin-top: 4px; font-size: 13px; color: var(--text-sub); }
+.button--link { display: flex; align-items: center; justify-content: center; height: 48px; text-decoration: none; }
+
 /* RSVP */
 .rsvp { padding: 40px 20px 60px; background: var(--surface-page); }
 .card { display: flex; flex-direction: column; gap: 28px; padding: 28px 20px; border-radius: 20px; background: #fff; }
@@ -91,7 +105,7 @@ legend.label { margin-bottom: 12px; }
 .options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .option {
   position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
-  height: 112px; border: 1px solid var(--border); border-radius: 12px; color: #6b7280; cursor: pointer;
+  height: 88px; border: 1px solid var(--border); border-radius: 12px; color: #6b7280; cursor: pointer;
 }
 .option span { color: #374151; font-size: 15px; font-weight: 500; }
 .option input { position: absolute; opacity: 0; pointer-events: none; }
@@ -107,7 +121,7 @@ legend.label { margin-bottom: 12px; }
 /* Done */
 .card--done { align-items: center; gap: 20px; text-align: center; outline: none; }
 .card--done .card__title + .section-desc { margin-top: -14px; }
-.done__icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--primary-soft); }
+.done__icon { margin: 4px; }
 .summary { align-self: stretch; display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 12px; background: var(--surface); font-size: 14px; }
 .summary div { display: flex; justify-content: space-between; }
 .summary dt { color: var(--text-sub); }
