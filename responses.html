@@ -12,30 +12,9 @@
 <main class="page page--host">
   <header class="nav">
     <h1 class="nav__title">응답 현황</h1>
-    <button class="nav__action" type="button" id="logout" hidden>로그아웃</button>
   </header>
 
   <p class="host-status" id="loading">불러오는 중…</p>
-
-  <section class="host-content" id="view-login" hidden>
-    <form class="card" id="login-form" novalidate>
-      <div>
-        <h2 class="card__title">호스트 로그인</h2>
-        <p class="section-desc">응답은 초대한 사람만 볼 수 있어요.<br />이메일로 로그인 링크를 보내드려요.</p>
-      </div>
-      <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="이메일 주소" aria-label="이메일 주소" required />
-      <button class="button" type="submit" id="login-submit">로그인 링크 받기</button>
-      <p class="notice" id="login-sent" role="status" hidden>메일함을 확인해주세요. 링크를 누르면 바로 응답 현황이 열려요.</p>
-      <p class="error" id="login-error" role="alert" hidden></p>
-    </form>
-  </section>
-
-  <section class="host-content" id="view-denied" hidden>
-    <div class="card">
-      <h2 class="card__title">볼 수 있는 권한이 없어요</h2>
-      <p class="section-desc">이 계정은 응답 현황을 볼 수 없어요. 초대한 사람의 계정으로 로그인해주세요.</p>
-    </div>
-  </section>
 
   <section class="host-content" id="view-dashboard" hidden>
     <div class="stats">
@@ -59,7 +38,6 @@
 
   <p class="error host-status" id="load-error" role="alert" hidden></p>
 </main>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="config.js"></script>
 <script src="responses.js"></script>
 </body>
