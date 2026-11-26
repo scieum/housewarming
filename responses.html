@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>응답 현황</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="page page--host">
+  <header class="nav">
+    <h1 class="nav__title">응답 현황</h1>
+    <button class="nav__action" type="button" id="logout" hidden>로그아웃</button>
+  </header>
+
+  <p class="host-status" id="loading">불러오는 중…</p>
+
+  <section class="host-content" id="view-login" hidden>
+    <form class="card" id="login-form" novalidate>
+      <div>
+        <h2 class="card__title">호스트 로그인</h2>
+        <p class="section-desc">응답은 초대한 사람만 볼 수 있어요.<br />이메일로 로그인 링크를 보내드려요.</p>
+      </div>
+      <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="이메일 주소" aria-label="이메일 주소" required />
+      <button class="button" type="submit" id="login-submit">로그인 링크 받기</button>
+      <p class="notice" id="login-sent" role="status" hidden>메일함을 확인해주세요. 링크를 누르면 바로 응답 현황이 열려요.</p>
+      <p class="error" id="login-error" role="alert" hidden></p>
+    </form>
+  </section>
+
+  <section class="host-content" id="view-denied" hidden>
+    <div class="card">
+      <h2 class="card__title">볼 수 있는 권한이 없어요</h2>
+      <p class="section-desc">이 계정은 응답 현황을 볼 수 없어요. 초대한 사람의 계정으로 로그인해주세요.</p>
+    </div>
+  </section>
+
+  <section class="host-content" id="view-dashboard" hidden>
+    <div class="stats">
+      <div class="stat"><p class="stat__label">참석</p><p class="stat__num" id="stat-yes">0명</p></div>
+      <div class="stat"><p class="stat__label">불참</p><p class="stat__num" id="stat-no">0명</p></div>
+      <div class="stat stat--highlight"><p class="stat__label">차량</p><p class="stat__num" id="stat-car">0대</p></div>
+    </div>
+
+    <section>
+      <h2 class="block-title">방문 차량 등록 <span id="plate-count">0</span></h2>
+      <ul class="plate-card" id="plate-list"></ul>
+      <p class="empty" id="plate-empty" hidden>차량으로 오시는 분이 아직 없어요.</p>
+    </section>
+
+    <section>
+      <h2 class="block-title">전체 응답 <span id="total-count">0</span></h2>
+      <ul class="response-list" id="response-list"></ul>
+      <p class="empty" id="response-empty" hidden>아직 응답이 없어요.</p>
+    </section>
+  </section>
+
+  <p class="error host-status" id="load-error" role="alert" hidden></p>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="responses.js"></script>
+</body>
+</html>
