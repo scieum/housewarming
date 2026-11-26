@@ -33,6 +33,8 @@ body {
 .cover__sub { font-size: 14px; font-weight: 500; opacity: .8; }
 .cover__title { margin-top: -8px; font-size: 26px; font-weight: 700; line-height: 1.35; }
 .cover__detail { display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 17px; font-weight: 500; line-height: 1.5; }
+/* 집 그림과 일시·장소 사이를 띄움 */
+.cover__art + .cover__detail { margin-top: 20px; }
 .chip { padding: 4px 10px; border-radius: 8px; background: #dceafe; color: #00378a; font-size: 14px; font-weight: 700; }
 
 /* Message */
@@ -47,6 +49,7 @@ body {
 .info { padding: 8px 20px 40px; }
 .info__card { display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: var(--surface); }
 .info__row { display: flex; gap: 10px; font-size: 16px; font-weight: 700; line-height: 1.4; }
+.info__row dd { font-weight: 400; }
 .info__row dt { color: var(--text-sub); padding-right: 10px; border-right: 1px solid var(--border); height: 14px; margin-top: 4px; line-height: 14px; }
 
 /* Menu */
