@@ -32,8 +32,8 @@ body {
 }
 .cover__sub { font-size: 14px; font-weight: 500; opacity: .8; }
 .cover__title { margin-top: -8px; font-size: 26px; font-weight: 700; line-height: 1.35; }
-.cover__detail { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; }
-.chip { padding: 2px 6px; border-radius: 8px; background: #dceafe; color: #00378a; font-size: 12px; font-weight: 700; }
+.cover__detail { display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 17px; font-weight: 500; line-height: 1.5; }
+.chip { padding: 4px 10px; border-radius: 8px; background: #dceafe; color: #00378a; font-size: 14px; font-weight: 700; }
 
 /* Message */
 .message {
@@ -78,7 +78,7 @@ body {
 .rsvp { padding: 40px 20px 60px; background: var(--surface-page); }
 .card { display: flex; flex-direction: column; gap: 28px; padding: 28px 20px; border-radius: 20px; background: #fff; }
 .card__title { font-size: 20px; font-weight: 700; }
-.card__title + .section-desc { margin-top: -22px; }
+.card > .card__title + .section-desc { margin-top: -22px; }
 .field { display: flex; flex-direction: column; gap: 12px; border: 0; padding: 0; min-width: 0; }
 .label { display: flex; align-items: center; gap: 4px; padding: 0; font-size: 16px; font-weight: 700; }
 /* fieldset의 legend는 flex gap을 받지 않아서 간격을 직접 줌 */
