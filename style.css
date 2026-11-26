@@ -40,7 +40,8 @@ body {
   display: flex; flex-direction: column; align-items: center; gap: 26px;
   padding: 72px 20px; text-align: center; font-size: 15px; line-height: 1.75; color: var(--text-body);
 }
-.message__icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 16px; background: var(--primary-soft); }
+.message__icon { border-radius: 16px; }
+.cover__art { object-fit: cover; }
 
 /* Info */
 .info { padding: 8px 20px 40px; }
@@ -61,11 +62,13 @@ body {
 
 /* RSVP */
 .rsvp { padding: 40px 20px 60px; background: var(--surface-page); }
-.card { display: flex; flex-direction: column; gap: 24px; padding: 24px 20px; border-radius: 20px; background: #fff; }
+.card { display: flex; flex-direction: column; gap: 28px; padding: 28px 20px; border-radius: 20px; background: #fff; }
 .card__title { font-size: 20px; font-weight: 700; }
-.card__title + .section-desc { margin-top: -18px; }
-.field { display: flex; flex-direction: column; gap: 8px; border: 0; padding: 0; min-width: 0; }
+.card__title + .section-desc { margin-top: -22px; }
+.field { display: flex; flex-direction: column; gap: 12px; border: 0; padding: 0; min-width: 0; }
 .label { display: flex; align-items: center; gap: 4px; padding: 0; font-size: 16px; font-weight: 700; }
+/* fieldset의 legend는 flex gap을 받지 않아서 간격을 직접 줌 */
+legend.label { margin-bottom: 12px; }
 .req { font-size: 12px; font-weight: 400; color: var(--danger); }
 .input {
   width: 100%; padding: 12px 16px; font: inherit; font-size: 16px;
@@ -85,10 +88,10 @@ body {
 .radio input:checked::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--primary); }
 .radio input:focus-visible, .option:has(input:focus-visible) { outline: 2px solid var(--primary); outline-offset: 2px; }
 
-.options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .option {
-  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
-  height: 88px; border: 1px solid var(--border); border-radius: 12px; color: #6b7280; cursor: pointer;
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  height: 112px; border: 1px solid var(--border); border-radius: 12px; color: #6b7280; cursor: pointer;
 }
 .option span { color: #374151; font-size: 15px; font-weight: 500; }
 .option input { position: absolute; opacity: 0; pointer-events: none; }
