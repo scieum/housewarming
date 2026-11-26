@@ -1,0 +1,112 @@
+:root {
+  --primary: #536dfe;
+  --primary-soft: #eef1ff;
+  --primary-strong: #3d4fd6; /* 연한 배경 위 글자용 (4.5:1 이상) */
+  --text: #000;
+  --text-body: #131313;
+  --text-sub: #6b7280;
+  --text-help: #66707a;
+  --placeholder: #a0a2a3;
+  --border: #e5e7eb;
+  --border-input: #e7e7e8;
+  --danger: #d90000;
+  --surface: #f3f4f6;
+  --surface-page: #f9fafb;
+}
+
+* { box-sizing: border-box; margin: 0; }
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background: #e5e7eb;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 480px; margin: 0 auto; background: #fff; min-height: 100vh; }
+[hidden] { display: none !important; }
+
+/* Cover */
+.cover {
+  display: flex; flex-direction: column; align-items: center; gap: 20px;
+  padding: 80px 20px; text-align: center; color: #fff;
+  background: linear-gradient(180deg, #1c2230, #5c6573);
+}
+.cover__sub { font-size: 14px; font-weight: 500; opacity: .8; }
+.cover__title { margin-top: -8px; font-size: 26px; font-weight: 700; line-height: 1.35; }
+.cover__detail { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; }
+.chip { padding: 2px 6px; border-radius: 8px; background: #dceafe; color: #00378a; font-size: 12px; font-weight: 700; }
+
+/* Message */
+.message {
+  display: flex; flex-direction: column; align-items: center; gap: 26px;
+  padding: 72px 20px; text-align: center; font-size: 15px; line-height: 1.75; color: var(--text-body);
+}
+.message__icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 16px; background: var(--primary-soft); }
+
+/* Info */
+.info { padding: 8px 20px 40px; }
+.info__card { display: flex; flex-direction: column; gap: 10px; padding: 20px; border-radius: 20px; background: var(--surface); }
+.info__row { display: flex; gap: 10px; font-size: 16px; font-weight: 700; line-height: 1.4; }
+.info__row dt { color: var(--text-sub); padding-right: 10px; border-right: 1px solid var(--border); height: 14px; margin-top: 4px; line-height: 14px; }
+
+/* Menu */
+.menu { padding: 8px 20px 48px; }
+.section-title { font-size: 18px; font-weight: 700; }
+.section-desc { margin-top: 4px; font-size: 14px; color: var(--text-sub); line-height: 1.5; }
+.menu__list { list-style: none; padding: 0; margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+.menu__item { display: flex; align-items: center; gap: 14px; padding: 14px; border: 1px solid var(--border); border-radius: 16px; }
+.menu__thumb { flex: none; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 14px; background: var(--surface); }
+.menu__name { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
+.menu__desc { margin-top: 4px; font-size: 13px; color: var(--text-sub); }
+.tag { padding: 1px 6px; border-radius: 6px; background: var(--primary-soft); color: var(--primary-strong); font-size: 11px; font-weight: 700; }
+
+/* RSVP */
+.rsvp { padding: 40px 20px 60px; background: var(--surface-page); }
+.card { display: flex; flex-direction: column; gap: 24px; padding: 24px 20px; border-radius: 20px; background: #fff; }
+.card__title { font-size: 20px; font-weight: 700; }
+.card__title + .section-desc { margin-top: -18px; }
+.field { display: flex; flex-direction: column; gap: 8px; border: 0; padding: 0; min-width: 0; }
+.label { display: flex; align-items: center; gap: 4px; padding: 0; font-size: 16px; font-weight: 700; }
+.req { font-size: 12px; font-weight: 400; color: var(--danger); }
+.input {
+  width: 100%; padding: 12px 16px; font: inherit; font-size: 16px;
+  border: 1px solid var(--border-input); border-radius: 8px; outline: none;
+}
+.input::placeholder { color: var(--placeholder); }
+.input:focus { border-color: var(--primary); }
+.input[aria-invalid="true"] { border: 1.5px solid var(--danger); }
+.help { font-size: 12px; color: var(--text-help); }
+.error { font-size: 12px; color: var(--danger); }
+.error::before { content: "⚠ "; }
+
+.radios { display: grid; grid-template-columns: 1fr 1fr; }
+.radio { display: flex; align-items: center; gap: 12px; min-height: 48px; padding-left: 14px; font-size: 16px; font-weight: 500; cursor: pointer; }
+.radio input { appearance: none; width: 20px; height: 20px; margin: 0; border: 1.5px solid var(--placeholder); border-radius: 50%; display: grid; place-items: center; cursor: pointer; }
+.radio input:checked { border: 2px solid var(--primary); }
+.radio input:checked::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--primary); }
+.radio input:focus-visible, .option:has(input:focus-visible) { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.option {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  height: 88px; border: 1px solid var(--border); border-radius: 12px; color: #6b7280; cursor: pointer;
+}
+.option span { color: #374151; font-size: 15px; font-weight: 500; }
+.option input { position: absolute; opacity: 0; pointer-events: none; }
+.option:has(input:checked) { background: var(--primary-soft); border: 1.5px solid var(--primary); color: var(--primary); }
+.option:has(input:checked) span { color: var(--primary-strong); font-weight: 700; }
+
+.button {
+  height: 52px; border: 0; border-radius: 8px; background: var(--primary); color: #fff;
+  font: inherit; font-size: 16px; font-weight: 700; cursor: pointer;
+}
+.button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+/* Done */
+.card--done { align-items: center; gap: 20px; text-align: center; outline: none; }
+.card--done .card__title + .section-desc { margin-top: -14px; }
+.done__icon { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--primary-soft); }
+.summary { align-self: stretch; display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 12px; background: var(--surface); font-size: 14px; }
+.summary div { display: flex; justify-content: space-between; }
+.summary dt { color: var(--text-sub); }
+.summary dd { font-weight: 700; }
+.card--done .button { align-self: stretch; }
